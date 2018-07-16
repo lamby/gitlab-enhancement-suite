@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+
+  "name": "GitLab Enhancement Suite",
+  "description": "Handy tools and improvements for GitLab instances",
+  "version": "0.0.1",
+
+  "content_scripts": [
+    {
+      "js": ["js/loader.js"],
+      "run_at": "document_end",
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "pages/options.html",
+  "page_action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "GitLab Enhancement Suite"
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "storage",
+    "tabs"
+  ],
+  "web_accessible_resources": [
+    "js/main.js",
+    "js/jquery.js",
+    "pages/options.js"
+  ]
+}
