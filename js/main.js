@@ -30,13 +30,13 @@ function GitLabEnhancementSuite(options) {
   // Features /////////////////////////////////////////////////////////////////
 
   $.option('allow_collaboration', function () {
-    if ($.pathnameEndsWith('/merge_requests/new')) {
-      $('#allow_collaboration').prop('checked', true);
+    if ($.pathnameEndsWith('/merge_requests/new') || $.pathnameEndsWith('/merge_requests/new/diffs')) {
+      $('#merge_request_allow_collaboration').prop('checked', true);
     }
   });
 
   $.option('remove_source_branches', function () {
-    if ($.pathnameEndsWith('/merge_requests/new')) {
+    if ($.pathnameEndsWith('/merge_requests/new') || $.pathnameEndsWith('/merge_requests/new/diffs')) {
       $('#merge_request_force_remove_source_branch').prop('checked', true);
     }
   });
