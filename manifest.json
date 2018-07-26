@@ -20,7 +20,7 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "options_page": "pages/options.html",
+  "options_ui": "pages/options.html",
   "page_action": {
     "default_icon": "icons/icon48.png",
     "default_title": "GitLab Enhancement Suite"
